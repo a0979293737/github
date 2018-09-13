@@ -194,7 +194,7 @@ var zebra = function(index){
     //斑馬 生命週期(growing)約35~40天 體力(phys_strength)15 速度(speed)約50~60
     herbivore.call(this, "斑馬"+index, 1, Math.floor(Math.random()*10)+30, true, 5, false, 15, Math.floor(Math.random()*10)+50, false, 1);//繼承草食動物
 };
-proto = Object.create(leopard.prototype);//將leopard.prototype繼承給zebra
+proto = Object.create(herbivore.prototype);//將herbivore.prototype繼承給zebra
 proto.constructor = zebra;
 zebra.prototype = proto;
 
@@ -202,7 +202,7 @@ var antelope = function(index){
     //羚羊 生命週期(growing)約25~35天 體力(phys_strength)10 速度(speed)約55~65
     herbivore.call(this, "羚羊"+index, 1, Math.floor(Math.random()*10)+25, true, 5, false, 12, Math.floor(Math.random()*10)+55, false, 2);//繼承草食動物
 };
-proto = Object.create(leopard.prototype);//將leopard.prototype繼承給antelope
+proto = Object.create(herbivore.prototype);//將herbivore.prototype繼承給antelope
 proto.constructor = antelope;
 antelope.prototype = proto;
 
@@ -210,7 +210,7 @@ var ostrich = function(index){
     //鴕鳥 生命週期(growing)約15~20天 體力(phys_strength)8 速度(speed)約85~95
     herbivore.call(this, "鴕鳥"+index, 1, Math.floor(Math.random()*10)+20, true, 5, false, 10, Math.floor(Math.random()*10)+85, false, 3);//繼承草食動物
 };
-proto = Object.create(leopard.prototype);//將leopard.prototype繼承給ostrich
+proto = Object.create(herbivore.prototype);//將herbivore.prototype繼承給ostrich
 proto.constructor = ostrich;
 ostrich.prototype = proto;
 
